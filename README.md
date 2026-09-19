@@ -61,6 +61,10 @@ Both URLs reach the same gateway and the same 1576+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 
+## No MCP client? Call it over HTTP
+
+This pack runs against a connected discord account, so it needs a Pipeworx key: sign in at https://pipeworx.io/account, connect discord, then call `POST https://gateway.pipeworx.io/v1/tools/discord_get_me` with `Authorization: Bearer <your Pipeworx key>`. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/discord_get_me`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
+
 ## Standalone (no gateway account)
 
 This package also runs as a local stdio MCP server — no Pipeworx account, no
