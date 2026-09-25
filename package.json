@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-discord",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Discord MCP Pack",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-e5cbc52d6400c8f0112a733d393702ca5bd6b9b6052254d30f64e038cea8e8ea",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-d2ab9dad1de380abf83636aab84d0609dd5ba7ad27e76c2c5f152e1c54f62f47",
+    "sourceCommit": "4fa4c64448be06f4a2ee4cee19f756f3558a7cad"
   }
 }
