@@ -1,0 +1,45 @@
+[
+  {
+    "name": "get_me",
+    "description": "Get the authorized Discord user's own identity (the connected account). Returns their user id, username, global display name, legacy discriminator, email, verified status, locale, and avatar hash. This is the user's own profile only — not other users or message content.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "list_guilds",
+    "description": "List the Discord servers (guilds) the authorized user is a member of. Returns each server's id, name, whether the user owns it, the user's permissions bitfield, the server's feature flags, and approximate member count. Covers only the user's own server memberships — it cannot read messages or non-member servers.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "get_guild_member",
+    "description": "Get the authorized Discord user's own membership details in a specific server (guild): their server nickname, role ids, join date, and Boost (premium) start date. Reads only the connected user's membership in that guild — not other members or message content.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "guild_id": {
+          "type": "string",
+          "description": "The ID of the Discord server (guild) to look up the user's membership in (from list_guilds)."
+        }
+      },
+      "required": [
+        "guild_id"
+      ]
+    }
+  },
+  {
+    "name": "list_connections",
+    "description": "List the authorized Discord user's linked external accounts (connections) — e.g. Steam, Twitch, GitHub, YouTube, Spotify. Returns each connection's type, account id, display name, and verified status. Reads only the connected user's own linked accounts.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  }
+]
